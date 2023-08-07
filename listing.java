@@ -15,11 +15,11 @@ import java.awt.SystemColor;
  *
  * @author noname
  */
-public class user extends JFrame {
+public class listing extends JFrame {
 
     DefaultListModel<String> listModel;
     boolean flag;//used to stop multiple entries
-    public user() {
+    public listing() {
     	setBackground(SystemColor.inactiveCaption);
         initComponents();
         listModel = new DefaultListModel<>();
@@ -197,7 +197,7 @@ public class user extends JFrame {
 
     private void WRITEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WRITEActionPerformed
         //writing to text file
-    	JOptionPane.showMessageDialog(user.this, "Writing...");
+    	JOptionPane.showMessageDialog(listing.this, "Writing...");
         int val = jList1.getModel().getSize();
         PrintWriter writer = null;
         try{
@@ -227,14 +227,14 @@ public class user extends JFrame {
 
     private void REMOVEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_REMOVEActionPerformed
         //will remove data
-    	JOptionPane.showMessageDialog(user.this, "Removing...");
+    	JOptionPane.showMessageDialog(listing.this, "Removing...");
         listModel.removeAllElements();
         jList1.setModel(listModel);
     }//GEN-LAST:event_REMOVEActionPerformed
 
     private void READActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_READActionPerformed
         //load data from list to text file
-    	JOptionPane.showMessageDialog(user.this, "Reading...");
+    	JOptionPane.showMessageDialog(listing.this, "Reading...");
         if(flag){
         BufferedReader br = null;
         try{
@@ -275,20 +275,20 @@ public class user extends JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(user.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(listing.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(user.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(listing.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(user.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(listing.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(user.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(listing.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new user().setVisible(true);
+                new listing().setVisible(true);
             }
         });
     }
